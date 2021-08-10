@@ -37,7 +37,7 @@ public class GameScreen extends AbstractScreen{
 	Sound soundHit;
 	Sound soundWin;
 	Sound soundLose;
-	private boolean pause = true;
+	
 	private int enemyScore = 0;
 	private int playerScore = 0;
   
@@ -101,9 +101,8 @@ public class GameScreen extends AbstractScreen{
 		
 		
 	    keyboardInputs();
-	    if(pause) {
-	    	ball.update(delta);
-	    }
+	    ball.update(delta);
+	    
 	    
 	    if(objeto.getAABB().collides(ball.getAABB())) {
 	    	ball.bouncePaddle(objeto.getAABB());
@@ -188,10 +187,7 @@ public class GameScreen extends AbstractScreen{
 				objeto.move(0, -2);
 			}
 		}
-		if(Gdx.input.isKeyJustPressed(Keys.SPACE)) {
-			pause = pause ? false : true;
-			
-		}
+		
 	}
 	
 	
