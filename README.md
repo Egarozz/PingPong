@@ -1,5 +1,5 @@
 # PingPong
-##headings
+## headings
 Ping Pong
 
 Ping Pong game made in Libgdx by a Begginer Java developer
